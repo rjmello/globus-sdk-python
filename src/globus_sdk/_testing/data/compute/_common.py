@@ -1,12 +1,16 @@
 import uuid
 
+ENDPOINT_ID = str(uuid.uuid1())
+
 FUNCTION_ID = str(uuid.uuid1())
 FUNCTION_NAME = "howdy_world"
 FUNCTION_CODE = "410\n10\n04\n:gASVQAAAAAAAAACMC2hvd2R5X3dvc ..."
 
+TASK_GROUP_ID = str(uuid.uuid1())
 TASK_ID = str(uuid.uuid1())
 TASK_ID_2 = str(uuid.uuid1())
-TASK_GROUP_ID = str(uuid.uuid1())
+TASK_ARGS = "36\n00\ngASVDAAAAAAAAACMBlJvZG5leZSFlC4=\n12 ..."
+TASK_ARGS_2 = "36\n00\ngASVCwAAAAAAAACMBUJvYmJ5lIWULg==\n12 ..."
 TASK_DOC = {
     "task_id": TASK_ID,
     "status": "success",

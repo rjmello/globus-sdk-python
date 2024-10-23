@@ -117,3 +117,19 @@ class ComputeClient(client.BaseClient):
                     :ref: TaskGroup/operation/get_task_group_tasks_v2_taskgroup__task_group_uuid__get
         """  # noqa: E501
         return self.get(f"/v2/taskgroup/{task_group_id}")
+
+    def submit(self, endpoint_id: UUIDLike, data: dict[str, t.Any]):
+        """Submit a batch of tasks to a Globus Compute endpoint.
+
+        :param endpoint_id: The ID of the Globus Compute endpoint.
+        :param data: The task batch document.
+
+        .. tab-set::
+
+            .. tab-item:: API Info
+
+                .. extdoclink:: Submit Batch
+                    :service: compute
+                    :ref: Endpoints/operation/submit_batch_v3_endpoints__endpoint_uuid__submit_post
+        """  # noqa: E501
+        return self.post(f"/v2/endpoints/{endpoint_id}/submit", data=data)
